@@ -13,8 +13,8 @@ The package is compatible with both Python 2 and 3.
 Installation
 ------------
 
-The wsinfo library is available on PyPI_, so you can install it
-using ``pip``::
+The wsinfo library is available on `PyPI <http://pypi.python.org/pypi/wsinfo>`_,
+so you can install it using ``pip``::
 
     pip install wsinfo
 
