@@ -58,13 +58,12 @@ easy as::
     >>> w = wsinfo.Info("https://github.com")
     >>> w.ip
     '192.30.253.112'
-    >>> w.server_software
-    [('Apache', '2.4.18'), ('OpenSSL', '1.0.2h'), ('PHP', '5.6.23'),
-    ('mod_perl', '2.0.8-dev'), ('Perl', 'v5.16.3')]
     >>> w.http_status_code
     200
     >>> w.title
     'How people build software · GitHub'
+    >>> w.content
+    '<!DOCTYPE html>\n<html>\n[...]\n</html>'
 
 Pretty nice, huh?
 

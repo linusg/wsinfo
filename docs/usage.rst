@@ -14,6 +14,10 @@ Usage
 
 #. Now you can get all the information::
 
+    >>> import wsinfo
+    >>> w = wsinfo.Info("https://github.com")
+    >>> w.ip
+    '192.30.253.112'
     >>> w.http_status_code
     200
     >>> w.title

@@ -26,6 +26,8 @@ The usage of the wsinfo library is as easy as::
 
     >>> import wsinfo
     >>> w = wsinfo.Info("https://github.com")
+    >>> w.ip
+    '192.30.253.112'
     >>> w.http_status_code
     200
     >>> w.title
