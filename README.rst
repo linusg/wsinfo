@@ -5,8 +5,8 @@ The wsinfo library
    :target: https://travis-ci.org/linusg/wsinfo/
    :alt: Travis CI test status
 
-.. image:: https://landscape.io/github/linusg/wsinfo/master/landscape.svg?style=flat-square
-   :target: https://landscape.io/github/linusg/wsinfo/develop
+.. image:: https://landscape.io/github/linusg/wsinfo/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/linusg/wsinfo/master
    :alt: Code health
 
 .. image:: https://img.shields.io/pypi/v/wsinfo.svg
