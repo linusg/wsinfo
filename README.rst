@@ -1,6 +1,22 @@
 The wsinfo library
 ==================
 
+.. image:: https://img.shields.io/travis/linusg/wsinfo/develop.svg
+   :target: https://travis-ci.org/linusg/wsinfo/
+   :alt: Travis CI test status
+
+.. image:: https://landscape.io/github/linusg/wsinfo/master/landscape.svg
+   :target: https://landscape.io/github/linusg/wsinfo/develop
+   :alt: Code health
+
+.. image:: https://img.shields.io/pypi/v/wsinfo.svg
+   :target: https://pypi.python.org/pypi/wsinfo
+   :alt: Version
+
+.. image:: https://img.shields.io/pypi/dm/wsinfo.svg
+   :target: https://pypi.python.org/pypi/wsinfo
+   :alt: Monthly downloads
+
 wsinfo (short for website information) is a Python package for getting some
 useful information about some website, without the need to write some
 complicated hackish Python code.
