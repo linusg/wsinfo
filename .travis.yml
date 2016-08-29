@@ -10,7 +10,7 @@ cache:
 os:
   - windows
   - linux
-  - osx
+  # - osx
 
 python:
   - "2.7"
