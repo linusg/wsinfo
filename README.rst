@@ -52,5 +52,5 @@ The code was tested with the following software configurations:
 + Windows 7        | CPython                   | 2.7.12             |
 +------------------+---------------------------+--------------------+
 
-...but should work cross all common platforms on Python 2.7 and 3.x. Other
+...but should work across all common platforms on Python 2.7 and 3.x. Other
 success reports are welcome.
