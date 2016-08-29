@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API &mdash; wsinfo 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="wsinfo 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Changes" href="changes.html"/>
+        <link rel="prev" title="Usage" href="usage.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> wsinfo
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">wsinfo</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/api.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api">
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-wsinfo"></span><p>The wsinfo library bundles the power of the <code class="docutils literal"><span class="pre">socket</span></code> module, some
+<code class="docutils literal"><span class="pre">urllib</span></code> subpackages, XML parsing and regular expressions into one library
+with the possibility to get a huge amount of information for a specific
+website.</p>
+<dl class="class">
+<dt id="wsinfo.Info">
+<em class="property">class </em><code class="descclassname">wsinfo.</code><code class="descname">Info</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#wsinfo.Info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class collecting some information about the website located at the
+given URL.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> &#8211; Valid URL to the website <em>(e.g.
+http://example.com/path/to/file.html)</em>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="wsinfo.Info.content">
+<code class="descname">content</code><a class="headerlink" href="#wsinfo.Info.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the website&#8217;s content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Content of the website <em>(e.g. HTML code)</em>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.favicon_path">
+<code class="descname">favicon_path</code><a class="headerlink" href="#wsinfo.Info.favicon_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path to the website&#8217;s icon.</p>
+<p>The <code class="docutils literal"><span class="pre">href</span></code> attribute of the first <code class="docutils literal"><span class="pre">&lt;link&gt;</span></code> tag containing
+<code class="docutils literal"><span class="pre">rel=&quot;icon&quot;</span></code> or <code class="docutils literal"><span class="pre">rel=&quot;shortcut</span> <span class="pre">icon&quot;</span></code> is used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The path to the icon of the website <em>(known as favicon</em>).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str or NoneType</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.http_header">
+<code class="descname">http_header</code><a class="headerlink" href="#wsinfo.Info.http_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the website&#8217;s HTTP header.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">HTTP header of the website.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.http_status_code">
+<code class="descname">http_status_code</code><a class="headerlink" href="#wsinfo.Info.http_status_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the website&#8217;s HTTP status code.</p>
+<ul class="simple">
+<li><strong>1xx:</strong> Information</li>
+<li><strong>2xx:</strong> Success</li>
+<li><strong>3xx:</strong> Redirection</li>
+<li><strong>4xx:</strong> Client error</li>
+<li><strong>5xx:</strong> Server error</li>
+</ul>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">this Wikipedia article</a> for reference.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">HTTP status code of the website.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.ip">
+<code class="descname">ip</code><a class="headerlink" href="#wsinfo.Info.ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the IP address of the website&#8217;s domain.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>This will not always return the IP address of the URL you&#8217;ve
+passed to the</strong> <code class="docutils literal"><span class="pre">Website</span></code> <strong>constructor.</strong> For example, the
+server may redirect to another page, and this function will
+return the IP address of the redirected URL. If the website
+implements a client side redirect, you will not be redirected
+but get the IP address of the URL you&#8217;ve passed before.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">IP address of the website&#8217;s domain.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.server">
+<code class="descname">server</code><a class="headerlink" href="#wsinfo.Info.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the server&#8217;s name/type.</p>
+<p>Most common are <em>Apache</em>, <em>nginx</em>, <em>Microsoft IIS</em> and <em>gws</em> on Google
+servers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The name or type of the server software.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.server_country">
+<code class="descname">server_country</code><a class="headerlink" href="#wsinfo.Info.server_country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the country the where the server is located.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is currently not implemented, I need to do some more research
+how to do this. I think <em>whois</em> is a buzzword...</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The country where the server hardware is located.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.server_software">
+<code class="descname">server_software</code><a class="headerlink" href="#wsinfo.Info.server_software" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of the server&#8217;s software stack.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This does only work for localhosts, because most public
+servers don&#8217;t list any software configuration in the HTTP response
+header.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of tuples containing both name and version for each
+software listed in the http header.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.title">
+<code class="descname">title</code><a class="headerlink" href="#wsinfo.Info.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the website&#8217;s title.</p>
+<p>The content of the first <code class="docutils literal"><span class="pre">&lt;title&gt;</span></code> tag in the HTML code is used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The title of the website.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="wsinfo.Info.url">
+<code class="descname">url</code><a class="headerlink" href="#wsinfo.Info.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the website&#8217;s URL.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>This will not always return the URL you&#8217;ve passed to the</strong>
+<code class="docutils literal"><span class="pre">Website</span></code> <strong>constructor.</strong> For example, the server may redirect
+to another page, and this function will return the URL of the
+website you was redirected to. If the website implements a client
+side redirect, you will not be redirected but get the URL you&#8217;ve
+passed before.</p>
+<p><strong>Example for clarification:</strong></p>
+<p>Using a fresh install of a recent <em>XAMPP</em>, <code class="docutils literal"><span class="pre">http://localhost</span></code>
+will redirect to <code class="docutils literal"><span class="pre">http://localhost/dashboard/</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">wsinfo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">wsinfo</span><span class="o">.</span><span class="n">Info</span><span class="p">(</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w</span><span class="o">.</span><span class="n">url</span>
+<span class="go">&#39;http://localhost/dashboard/&#39;</span>
+</pre></div>
+</div>
+<p>The original URL you&#8217;ve passed to the <code class="docutils literal"><span class="pre">Website</span></code> constructor is
+stored in the class attribute <code class="docutils literal"><span class="pre">_url</span></code>:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w</span><span class="o">.</span><span class="n">_url</span>
+<span class="go">&#39;http://localhost&#39;</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">URL of the website.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changes.html" class="btn btn-neutral float-right" title="Changes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral" title="Usage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Linus Groh.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
