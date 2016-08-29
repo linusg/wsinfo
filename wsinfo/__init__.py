@@ -234,7 +234,7 @@ class Info:
                  software listed in the http header.
         :rtype: list
         """
-        if not "localhost" in self.url.lower():
+        if "localhost" not in self.url.lower():
             raise ValueError("This works only for localhosts, got '{}'"
                              .format(self.url))
         software = []
