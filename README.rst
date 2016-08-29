@@ -40,9 +40,17 @@ Tested Platforms and Python Versions
 
 The code was tested with the following software configurations:
 
-- Ubuntu 16.04 LTS, CPython 2.7.12
-- Ubuntu 16.04 LTS, CPython 3.5.2
-- Windows 7, CPython 2.7.12
++------------------+------------------------------------------------+
+| **Platform**     | **Python implementation** | **Python version** |
++------------------+---------------------------+--------------------+
++ Ubuntu 16.04 LTS | CPython                   | 2.7.12             |
++------------------+---------------------------+--------------------+
++ Ubuntu 16.04 LTS | CPython                   | 3.5.2              |
++------------------+---------------------------+--------------------+
++ Ubuntu 16.04 LTS | PyPy                      | 2.7.10             |
++------------------+---------------------------+--------------------+
++ Windows 7        | CPython                   | 2.7.12             |
++------------------+---------------------------+--------------------+
 
 ...but should work cross all common platforms on Python 2.7 and 3.x. Other
 success reports are welcome.
