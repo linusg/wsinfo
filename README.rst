@@ -40,7 +40,7 @@ Tested Platforms and Python Versions
 
 The code was tested with the following software configurations:
 
-+------------------+------------------------------------------------+
++------------------+---------------------------+--------------------+
 | **Platform**     | **Python implementation** | **Python version** |
 +------------------+---------------------------+--------------------+
 + Ubuntu 16.04 LTS | CPython                   | 2.7.12             |
