@@ -83,7 +83,7 @@ class Info:
 
         .. note::
            **This will not always return the URL you've passed to the**
-           ``Website`` **constructor.** For example, the server may redirect
+           ``Info`` **constructor.** For example, the server may redirect
            to another page, and this function will return the URL of the
            website you was redirected to. If the website implements a client
            side redirect, you will not be redirected but get the URL you've
@@ -99,7 +99,7 @@ class Info:
                >>> w.url
                'http://localhost/dashboard/'
 
-           The original URL you've passed to the ``Website`` constructor is
+           The original URL you've passed to the ``Info`` constructor is
            stored in the class attribute ``_url``::
 
                >>> w._url
@@ -116,7 +116,7 @@ class Info:
 
         .. note::
            **This will not always return the IP address of the URL you've
-           passed to the** ``Website`` **constructor.** For example, the
+           passed to the** ``Info`` **constructor.** For example, the
            server may redirect to another page, and this function will
            return the IP address of the redirected URL. If the website
            implements a client side redirect, you will not be redirected
