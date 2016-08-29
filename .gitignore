@@ -79,6 +79,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
+.venv/
 venv/
 ENV/
 
@@ -87,3 +88,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# PyCharm project folder
+.idea/
+
+# Old files
+old/
