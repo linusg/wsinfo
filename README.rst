@@ -8,7 +8,8 @@ complicated hackish Python code.
 Requirements
 ------------
 
-The package is compatible with both Python 2 and 3.
+The package is compatible with both Python 2 and 3, so everything you need is
+a recent Python installation.
 
 Installation
 ------------
