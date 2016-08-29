@@ -1,7 +1,7 @@
 The wsinfo library
 ==================
 
-.. image:: https://img.shields.io/travis/linusg/wsinfo/develop.svg
+.. image:: https://api.travis-ci.org/linusg/wsinfo.svg?branch=master
    :target: https://travis-ci.org/linusg/wsinfo/
    :alt: Travis CI test status
 
