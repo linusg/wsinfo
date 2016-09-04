@@ -164,7 +164,7 @@ class Info:
         :rtype: str
         """
         # Search for title tag
-        pattern = re.compile(r"<title>(.*?)</title>",
+        pattern = re.compile(r"<title.*?>(.*?)</title>",
                              re.IGNORECASE | re.DOTALL)
         match = re.search(pattern, self._content)
         if match is not None:
@@ -191,7 +191,7 @@ class Info:
         :rtype: str or NoneType
         """
         # Iterate over all found <link> tags
-        pattern = re.compile(r"<link.*?>", re.MULTILINE)
+        pattern = re.compile(r"<link.*?>", re.IGNORECASE | re.DOTALL)
         for tag in pattern.findall(self._content):
             # Form HTML to valid XML
             if not tag.endswith("<link/>"):
@@ -203,6 +203,21 @@ class Info:
             if root.get("rel") in ["icon", "shortcut icon"]:
                 return root.get("href")
         return None
+
+    @property
+    def hierarchy(self):
+        """Get a list representing the heading hierarchy.
+
+        :return: List of tuples containing the heading type *(h1, h2, ...)*
+                 and the headings text.
+        :rtype: list
+        """
+        hlist = []
+        # Iterate over all found <h1> - <h6> tags
+        pattern = re.compile(r"<h(?P<n>[1-6])>(.*?)</h(?P=n)>",
+                             re.IGNORECASE | re.DOTALL)
+        return [("h{}".format(nr), text) for nr, text in
+                pattern.findall(self._content)]
 
     @property
     def server(self):
@@ -217,7 +232,8 @@ class Info:
         for line in self.http_header.splitlines():
             if line.startswith("Server:"):
                 line = line[7:].strip()
-                name = re.search(r"([^/: ])*", line).group(0)
+                pattern = re.compile(r"([^/: ])*")
+                name = pattern.search(line).group(0)
                 if name.lower() not in self.url.lower():
                     return name
         return ""
@@ -234,14 +250,17 @@ class Info:
                  software listed in the http header.
         :rtype: list
         """
-        if "localhost" not in self.url.lower():
-            raise ValueError("This works only for localhosts, got '{}'"
-                             .format(self.url))
+        pattern = re.compile(r".*?\.?localhost:?.*?",
+                             re.IGNORECASE | re.DOTALL)
+        if not pattern.match(urlparse(self.url).netloc.lower()):
+            raise ValueError("this works only for localhosts, got '{}'"
+                             .format(urlparse(self.url).netloc))
         software = []
+        pattern = re.compile(r"(\S*)/(\S*)")
         for line in self.http_header.splitlines():
             if line.startswith("Server:"):
                 line = line[7:].strip()
-                for pair in re.findall(r"(\S*)/(\S*)", line):
+                for pair in pattern.findall(line):
                     software.append(pair)
         return software
 
