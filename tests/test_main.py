@@ -14,7 +14,7 @@ def test_website():
             assert w.content != ""
             assert w.favicon_path == \
                 "https://assets-cdn.github.com/favicon.ico"
-            assert w.hierarchy == ""
+            assert w.hierarchy == []
             assert w.http_header != ""  # TODO find a way to test this
             assert w.http_status_code == 200
             assert w.ip in ["192.30.253." + str(i) for i in [112, 113]]
