@@ -24,7 +24,7 @@ def test_website():
             with pytest.raises(ValueError):
                 assert w.server_software
             assert w.title == "How people build software · GitHub"
-            assert w.url == "https://github.com"
+            assert w.url == "https://github.com/"
 
         elif url == "http://localhost":
             assert w.content != ""
