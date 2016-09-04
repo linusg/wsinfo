@@ -4,6 +4,11 @@ from wsinfo import __version__
 with open("README.rst", "r") as f:
     long_description = f.read()
 
+long_description += "\n"
+
+with open("CHANGES", "r") as f:
+    long_description += f.read()
+
 setup(name="wsinfo",
       packages=["wsinfo"],
       version=__version__,
