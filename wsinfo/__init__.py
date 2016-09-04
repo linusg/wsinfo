@@ -212,7 +212,6 @@ class Info:
                  and the headings text.
         :rtype: list
         """
-        hlist = []
         # Iterate over all found <h1> - <h6> tags
         pattern = re.compile(r"<h(?P<n>[1-6])>(.*?)</h(?P=n)>",
                              re.IGNORECASE | re.DOTALL)
