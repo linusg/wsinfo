@@ -17,6 +17,10 @@ The wsinfo library
    :target: https://pypi.python.org/pypi/wsinfo
    :alt: Monthly downloads
 
+.. image:: https://img.shields.io/badge/docs-latest-blue.svg
+   :target: https://wsinfo.readthedocs.io/en/latest/
+   :alt: Documentation
+
 wsinfo (short for website information) is a Python package for getting some
 useful information about some website, without the need to write some
 complicated hackish Python code.
@@ -50,6 +54,11 @@ The usage of the wsinfo library is as easy as::
     'How people build software · GitHub'
     >>> w.content
     '<!DOCTYPE html>\n<html>\n[...]\n</html>'
+
+Documentation
+-------------
+
+The latest documentation is always available here: https://wsinfo.readthedocs.io/en/latest/
 
 Tested Platforms and Python Versions
 ------------------------------------

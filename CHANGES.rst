@@ -9,6 +9,12 @@ Todo
 
 **More ideas are always welcome!**
 
+1.2.0
+-----
+
+- Hosted docs on `readthedocs.io <http://wsinfo.readthedocs.io/en/latest/>`_
+- Minor documentation changes
+
 1.1.0
 -----
 
