@@ -17,7 +17,7 @@ Just check the installation::
 
     >>> import wsinfo
     >>> wsinfo.__version__
-    '1.0.0'
+    '1.1.1'
 
 And here we go!
 

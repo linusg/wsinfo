@@ -54,19 +54,8 @@ The usage of the wsinfo library is as easy as::
 Tested Platforms and Python Versions
 ------------------------------------
 
-The code was tested with the following software configurations:
+The code was tested on all major platforms using a wide range of Python
+versions.
 
-+------------------+---------------------------+--------------------+
-| **Platform**     | **Python implementation** | **Python version** |
-+------------------+---------------------------+--------------------+
-+ Ubuntu 16.04 LTS | CPython                   | 2.7.12             |
-+------------------+---------------------------+--------------------+
-+ Ubuntu 16.04 LTS | CPython                   | 3.5.2              |
-+------------------+---------------------------+--------------------+
-+ Ubuntu 16.04 LTS | PyPy 5.1.2                | 2.7.10             |
-+------------------+---------------------------+--------------------+
-+ Windows 7        | CPython                   | 2.7.12             |
-+------------------+---------------------------+--------------------+
-
-...but should work across all common platforms on Python 2.7 and 3.x. Other
-success reports are welcome.
+If you experience some issues, feel free to contact me or `open an issue on
+GitHub <https://github.com/linusg/wsinfo/issues/new>`_.
