@@ -15,13 +15,17 @@ with open("urls.txt", "r") as f:
         url = url[:-1]
         try:
             w = Info(url)
-            if w.server != "":
-                if not w.server in servers:
-                    servers[w.server] = 1
+            if type(w.server) == list:
+                server = w.server[0]
+            else:
+                server = ""
+            if server:
+                if server not in servers:
+                    servers[server] = 1
                 else:
-                    servers[w.server] += 1
+                    servers[server] += 1
             print("{:35}  {:15}  {:3}  {:15}".format(
-                w._url, w.ip, w.http_status_code, w.server))
+                w._url, w.ip, w.http_status_code, server))
         except Exception as e:
             print("{:35}  {}".format(url, e))
         cnt += 1

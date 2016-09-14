@@ -187,7 +187,7 @@ class Info:
         """Get the website's content type.
 
         :return: Content-type of the website's code *(e.g. text/html)*.
-        :rtype: str
+        :rtype: str or NoneType
         """
         return self._site.info()["Content-Type"]
 
@@ -231,16 +231,26 @@ class Info:
 
     @property
     def server(self):
-        """Get the server's name/type.
+        """Get the server's name/type and version.
 
         Most common are *Apache*, *nginx*, *Microsoft IIS* and *gws* on Google
         servers.
 
-        :return: The name or type of the server software and additional
-                 information like the version number.
-        :rtype: str
+        :return: A list containing the name or type of the server software and
+                 (if available) the version number.
+        :rtype: list or NoneType
         """
-        return self._site.info()["Server"]
+        info = self._site.info()["Server"]
+        if info:
+            info = info.split("/", 1)
+            if len(info) < 2:
+                info.append(None)
+            if type(info[1]) == str:
+                pattern = re.compile(r"\((.*?)\)")
+                info[1] = pattern.sub("", info[1]).strip()
+            return info
+        else:
+            return None
 
     @property
     def server_software(self):
@@ -267,6 +277,20 @@ class Info:
                 for pair in pattern.findall(line):
                     software.append(pair)
         return software
+
+    @property
+    def server_os(self):
+        """Get the operating system the server is running on.
+
+        :return: The name of the servers OS.
+        :rtype: str or NoneType
+        """
+        server = self._site.info()["Server"]
+        pattern = re.compile(r".*?\((.*?)\)")
+        if not pattern.match(server):
+            return None
+        else:
+            return pattern.match(server).group(1)
 
     @property
     def server_country(self):
