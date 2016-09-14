@@ -236,7 +236,8 @@ class Info:
         Most common are *Apache*, *nginx*, *Microsoft IIS* and *gws* on Google
         servers.
 
-        :return: The name or type of the server software.
+        :return: The name or type of the server software and additional
+                 information like the version number.
         :rtype: str
         """
         return self._site.info()["Server"]
