@@ -18,7 +18,8 @@ def test_website():
             assert w.http_header != ""  # TODO find a way to test this
             assert w.http_status_code == 200
             assert w.ip in ["192.30.253." + str(i) for i in [112, 113]]
-            assert w.server == ""
+            assert w.server == ["GitHub.com", None]
+            assert w.server_os is None
             with pytest.raises(NotImplementedError):
                 assert w.server_country
             with pytest.raises(ValueError):
@@ -34,7 +35,8 @@ def test_website():
             assert w.http_header != ""
             assert w.http_status_code == 200
             assert w.ip == "127.0.0.1"
-            assert w.server == "Apache"
+            assert w.server[0] == "Apache"
+            assert w.server_os == "Unix"
             with pytest.raises(NotImplementedError):
                 assert w.server_country
             assert len(w.server_software) > 0

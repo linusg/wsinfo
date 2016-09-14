@@ -247,7 +247,7 @@ class Info:
                 info.append(None)
             if type(info[1]) == str:
                 pattern = re.compile(r"\((.*?)\)")
-                info[1] = pattern.sub("", info[1]).strip()
+                info[1] = pattern.sub("", info[1]).split("  ")[0].strip()
             return info
         else:
             return None
