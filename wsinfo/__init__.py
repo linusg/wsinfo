@@ -183,6 +183,15 @@ class Info:
         return self._content
 
     @property
+    def content_type(self):
+        """Get the website's content type.
+
+        :return: Content-type of the website's code *(e.g. text/html)*.
+        :rtype: str
+        """
+        return self._site.info()["Content-Type"]
+
+    @property
     def favicon_path(self):
         """Get the path to the website's icon.
 
@@ -230,14 +239,7 @@ class Info:
         :return: The name or type of the server software.
         :rtype: str
         """
-        for line in self.http_header.splitlines():
-            if line.startswith("Server:"):
-                line = line[7:].strip()
-                pattern = re.compile(r"([^/: ])*")
-                name = pattern.search(line).group(0)
-                if name.lower() not in self.url.lower():
-                    return name
-        return ""
+        return self._site.info()["Server"]
 
     @property
     def server_software(self):
