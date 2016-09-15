@@ -154,7 +154,7 @@ class Info:
         :return: HTTP header of the website.
         :rtype: str
         """
-        return self._site.headers.as_string()
+        return str(self._site.headers)
 
     @property
     def http_header_dict(self):
