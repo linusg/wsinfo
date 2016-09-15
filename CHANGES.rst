@@ -1,13 +1,14 @@
 Changes
 =======
 
-Todo
-----
+1.3.0
+-----
 
-- Get web hoster
-- Get website owner
-
-**More ideas are always welcome!**
+- Added properties: ``content_type``, ``http_header_dict`` and ``server_os``
+- Correct handling of HTTP Errors (retrieve error page)
+- Documentation updates
+- Code cleanup
+- Minor fixes and improvements
 
 1.2.0
 -----

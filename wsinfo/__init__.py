@@ -5,7 +5,7 @@ with the possibility to get a huge amount of information for a specific
 website.
 """
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __author__ = "Linus Groh"
 __license__ = "MIT license"
 
