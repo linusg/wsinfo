@@ -154,7 +154,16 @@ class Info:
         :return: HTTP header of the website.
         :rtype: str
         """
-        return str(self._site.headers)
+        return self._site.headers.as_string()
+
+    @property
+    def http_header_dict(self):
+        """Get the website's HTTP header as dictionary.
+
+        :return: HTTP header of the website as dictionary.
+        :rtype: dict
+        """
+        return dict(self._site.headers)
 
     @property
     def title(self):
@@ -185,6 +194,11 @@ class Info:
     @property
     def content_type(self):
         """Get the website's content type.
+
+        .. note:
+           Check the output of this function using the ``startswith()`` method
+           of strings, because the returned string may contain additional
+           information, e.g. ``text/html; charset=utf-8``.
 
         :return: Content-type of the website's code *(e.g. text/html)*.
         :rtype: str or NoneType
